@@ -2,9 +2,6 @@
 ***
 ## Free Code Camp Practical Task "Local Weather"
 
-About my Quote Machine:
-  * Stylish app, that will give you an "Disciples" atmosphere, also app had cool "dark" soundtrack from the game.
-
  How I see my app:
 1. Changeable background
 2. Background sound, depend from weather (thunder, rain, snow, windy-sond of wind, sunshine-birds)
