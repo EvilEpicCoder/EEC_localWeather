@@ -14,5 +14,5 @@ Features like to add:
 3. Use more than one service in one app.
 
 How to use:
-  * Download as ZIP, unpack, run EEC_quoteMachine.html
+  * Download as ZIP, unpack, run EEC_localWeather.html
 
