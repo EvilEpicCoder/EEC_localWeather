@@ -1,1 +1,42 @@
+.container{
+	margin:auto;
+	padding-top:150px;
+	text-align:center;
+}
+.icon-area{
+display:inline-block;
+position:relative;
+height:64px;
+width:64px;
+background:lightgreen;
+}
+.location-area{
+display:inline-block;
+position:relative;
+height:64px;
+width:128px;
+background:red;		
+}
+.temperature-area{
+display:inline-block;
+position:relative;
+height:64px;
+width:128px;
+background:lightblue;
+}
+.temperature-change-area{
+display:inline-block;
+position:relative;
+height:64px;
+width:64px;
+background:magenta;
+}
 
+.wind-area{
+display:inline-block;
+position:relative;
+height:64px;
+width:64px;
+background:red;	
+	
+}
