@@ -1,23 +1,48 @@
-.container{
-	margin:auto;
-	padding-top:150px;
+div{
+	display:inline-block;
+	margin:1px;
+	padding:1px;
+	text-indent: 10px;
 	text-align:center;
+	z-index: 4;
+}
+.containerX{
+/*border: 3px solid green;*/
+	margin-left:auto;
+	margin-top:250px;
+	margin-bottom:50px;
+	//text-align:center;
+	width:100%;
+}
+.vblock{
+clear: left;
+display:block;
+/*border: 3px solid red;*/
+}
+.hblock{
+display:inline-block;
+float: left;
+/*border: 3px solid blue;*/
 }
 .sqr{
 display:inline-block;
 position:relative;
-height:64px;
-width:64px;
+height:auto;
+max-width:190px;
+color:white;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-shadow: -1px 0 gray, 0 1px blue, 1px 0 gray, 0 -1px gray;
+
 }
 .bsqr{
 display:inline-block;
 position:relative;
-height:64px;
+height:128px;
 width:128px;
 }
 .icon-area{
-
-background:lightgreen;
+background:#DFF2F9;
 }
 .location-area{
 background:red;		
@@ -26,10 +51,188 @@ background:red;
 background:lightblue;
 }
 .temperature-change-area{
-background:magenta;
-}
 
+}
 .wind-area{
 background:red;	
 	
+}
+.green{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
+background: rgb(180,227,145); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(180,227,145,1) 0%, rgba(97,196,25,1) 50%, rgba(180,227,145,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */	
+}
+.blue{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+background: rgb(179,220,237); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+}
+.bg{
+}
+.sun {
+	position: relative;
+	top: 10px;
+	left: 0px;
+	width: 48px;
+	height: 48px;
+	color:red;
+	padding-top:10px;/*changed*/
+	padding-right:10px;
+	margin-bottom:10px;/*changed*/
+	border-radius: 50%;
+	/*background:rgba(255, 190, 0, 0.8);*/
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff600+58,ff7b00+84 */
+background: rgb(255,246,0); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(255,246,0,1) 58%, rgba(255,123,0,1) 84%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(255,246,0,1) 58%,rgba(255,123,0,1) 84%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(255,246,0,1) 58%,rgba(255,123,0,1) 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff600', endColorstr='#ff7b00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	z-index: 1;
+    box-shadow:0px 0px 10px rgb(255, 255, 255),
+    0px 0px 20px rgb(255, 178, 0);
+}
+.moon {
+	position: relative;
+	top: 8px;
+	left: 8px;
+	width: 48px;
+	height: 48px;
+	
+	border-radius: 50%;
+	background:rgba(255, 250, 250, 0.8);
+
+	z-index: 1;
+    box-shadow:0px 0px 10px rgb(25, 25, 25),
+    0px 0px 20px rgb(25, 25, 25);
+}
+.moon::after {
+	content:'';
+	position: absolute;
+	top: 4px;
+	left: 16px;
+	width: 32px;
+	height: 40px;
+	
+	border-radius: 50%;
+	background:rgba(80, 80, 80, 0.8);
+
+	z-index: 2;
+    box-shadow:0px 0px 1px rgb(0, 0, 0),
+    0px 0px 5px rgb(255, 255, 255);
+}
+
+.cloud {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+	top:0px;
+	left:8px;
+	height: 16px;
+	position: relative;
+	width: 48px;
+	z-indeX: 8;
+}
+
+.cloud::after, .cloud::before {
+    background: #fff;
+	content: '';
+	position: absolute;
+	height: 30px;
+	left: 15px;
+	top: 15px;
+	width: 30px;
+	z-indeX: 8;
+}
+
+.cloud::after {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+	height: 30px;
+	left: 15px;
+	top: -5px;
+	width: 30px;
+}
+
+.cloud::before {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	width: 18px;
+	height: 18px;
+	right: 5px;
+	top: -9px;
+}
+.cloud-black {
+	background: #333;
+	background: -moz-linear-gradient(top,  #333 5%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#333), color-stop(100%,#f1f1f1));
+	background: -webkit-linear-gradient(top,  #333 5%,#f1f1f1 100%);
+	background: -o-linear-gradient(top,  #333 5%,#f1f1f1 100%);
+	background: -ms-linear-gradient(top,  #333 5%,#f1f1f1 100%);
+	background: linear-gradient(top,  #333 5%,#f1f1f1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endColorstr='#f1f1f1',GradientType=0 );
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	top:-20px;
+	left:8px;
+	height: 12px;
+	position: relative;
+	width: 35px;
+	z-index: 99;
+}
+
+.cloud-black::after, .cloud-black::before {
+    background: #333;
+	content: '';
+	position: absolute;
+	z-index: 1;
+}
+
+.cloud-black::after {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	height: 10px;
+	left: 5px;
+	top: -5px;
+	width: 10px;
+}
+
+.cloud-black::before {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	width: 18px;
+	height: 18px;
+	right: 5px;
+	top: -9px;
 }
