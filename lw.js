@@ -1,4 +1,5 @@
 var cCode="";
+
 function yWeatherCodes(codeNum,countryCode){
 var wCode=['tornado','tropical storm','hurricane','severe thunderstorms','thunderstorms',
 'mixed rain and snow', 'mixed rain and sleet','mixed snow and sleet','freezing drizzle','drizzle',
@@ -12,33 +13,73 @@ var wCode=['tornado','tropical storm','hurricane','severe thunderstorms','thunde
 var wCodeRus=['торнадо','тропический шторм','ураган','сильные грозы','грозы','cмешанный дождь и снег','смешанный дождь и мокрый снег','смешанный снег и мокрый снег','замораживание моросящего дождя','дождь',
 'замерзающий дождь','ливни','ливни','снежные бури','снежные ливни','снег','снег','град',
 'снег','пыль','туманность','туман','дымчатый','сильные порывы','ветреный','холодный','облачный','облачно (ночь)',
-'oблачно (день)','облачно (ночь)','облачно (день)','ясный (ночной)','солнечный','честный (ночь)',
-'справедливый (день)','смешанный дождь и град','горячие','изолированные грозы','разбросанные грозы','разбросанные грозы',
+'oблачно (день)','облачно (ночь)','облачно (день)','ясный (ночной)','солнечный','ни облачка (ночь)',
+'ни облачка (день)','смешанный дождь и град','горячие','изолированные грозы','разбросанные грозы','разбросанные грозы',
 'рассеянные ливни','сильный снег','разбросанные снежные ливни','сильный снег','облачно','грозы','снежные ливни','изолированные грозы','недоступно'];
 
-var wCodeUkr=['торнадо','тропічний шторм','ураган,сильні грози','грози,змішаний дощ та сніг','змішаний дощ та сніг','змішаний сніг і сніг','замерзаючий дощ','дощ',
+var wCodeUkr=['торнадо','тропічний шторм','ураган','сильні грози','грози','змішаний дощ та сніг','змішаний дощ та сніг','змішаний сніг і сніг','замерзаючий дощ','дощ',
 'замерзаючий дощ','дощ','дощ','снігові шквалі','легкі снігові дощі','сніг','сніг','град',
 'сніг','пил','туман','туман','димка','порывчастий вiтер','вітряний','холодний','хмарний','переважно хмарно (ніч)',
-'переважно хмарність(день)','частково хмарно (ніч)','частково хмарно(день)','ясно (ніч)','сонячний','ярмарок (ніч)',
-'ярмарок (день)','змішаний дощ та град','жарко','ізольовані грози','розсипані грози','розсипані грози',
+'переважно хмарність(день)','частково хмарно (ніч)','частково хмарно(день)','ясно (ніч)','сонячний','ясна (ніч)',
+'сонячний (день)','змішаний дощ та град','жарко','ізольовані грози','розсипані грози','розсипані грози',
 'розсипані дощі','важкий сніг','розсипані снігові дощі','важкий сніг','частково хмарно','грози','снігові дощі','ізольовані грози','недоступні'];
-//console.log(codeNum+countryCode+"GGggggggg");
+console.log(codeNum+countryCode+"GGggggggg");
 //$(".code").text(wCode[codeNum.])
+//console.log(codeNum+countryCode+"GGggggggg");
+//console.log(wCodeRus[codeNum]+"wCodeRus[codeNum]");
+//console.log(wCodeUkr[codeNum]+"wCodeUkr[codeNum]");
+//console.log(wCode[codeNum]+"wCode[codeNum]");
 	
-	
-	console.log(codeNum+countryCode+"GGggggggg");
-	console.log(wCodeRus[codeNum]+"wCodeRus[codeNum]");
-	console.log(wCodeUkr[codeNum]+"wCodeUkr[codeNum]");
-	console.log(wCode[codeNum]+"wCode[codeNum]");
-	
-	if(lang="RU"){
+	if(countryCode=="RU"){
 		return wCodeRus[codeNum];
-	}else if(lang="UA"){
+	}else if(countryCode=="UA"){
 		return wCodeUkr[codeNum];
 	}else{
 		return wCode[codeNum];
 	}
 
+}
+function yDay(dayString,dateString,countryCode){
+var engShortDay=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+var engDay=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var ruShortDay=['Пон','Вто','Сре','Чет','Пят','Суб','Вос'];
+var ruDay=['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'];
+var uaShortDay=['Пон','Вiв','Сер','Чет','П’ят','Суб','Нед'];
+var uaDay=['Понеділок','Вівторок','Середа','Четвер','П\'ятниця','Субота','Неділя'];
+
+var enShortMonth=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+var enMonth=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var ruMonth=['Январь', 'Февраль', 'Март', 'Апрель','Май', 'Июнь', 'Июль', 'Август','Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+var uaMonth=['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'];
+var dateArr;
+dateArr=dateString.split(' ');
+console.log(dateArr);
+  for(var i=0;i<=enShortMonth.length;i++){
+    //console.log(enShortMonth[i]);
+      if(enShortMonth[i]==dateArr[1]){
+        if(countryCode=="RU"){
+		      dateArr[1]=ruMonth[i];
+	        }else if(countryCode=="UA"){
+		      dateArr[1]=uaMonth[i];
+	        }else{
+		      dateArr[1]=enMonth[i];
+	        }
+      }
+  }
+  for(var i=0;i<= engShortDay.length;i++){
+    //console.log(enShortMonth[i]);
+      if(engShortDay[i]==dayString){
+        if(countryCode=="RU"){
+		      dayString=ruShortDay[i];
+	        }else if(countryCode=="UA"){
+		      dayString=uaShortDay[i];
+	        }else{
+		      dayString=engShortDay[i];
+	        }
+      }
+  }
+  dateArr=dateArr.join(' ');
+ return dayString+" "+dateArr;
 }
 function showStatusJson(status){
 //update HTML view and show is "success", "notmodified", "error", "timeout", or "parsererror"
@@ -69,7 +110,9 @@ $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?latlng='+"46.487798,
 				showWeather(data.results[1].address_components[2].long_name);
 				//arr=data.results.formatted_address;
 				//console.log(arr);
-				showStatusJson(status)});
+				showStatusJson(status);
+				getCountryCode(data.results[1].address_components[3].short_name);
+				});
 }
 function gcpError(){
 Materialize.toast("GPS position fail", 3000);
@@ -101,12 +144,13 @@ console.log(status+"from showWeather");
 //console.log(data);
 $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20item.forecast%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22"+data+"%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",function(data,status,xhr){
 				//console.log(data.query.results.channel[0].item.forecast.text);
-				$(".day").text(data.query.results.channel[0].item.forecast.day);
-				$(".date").text(data.query.results.channel[0].item.forecast.date);
+				//data.query.results.channel[0].item.forecast.day);
+				//$(".date").text(data.query.results.channel[0].item.forecast.date);
 				//$(".date").append("<span=class="date">27 Aug </span></");
 				
 				//console.log();
 				$(".code").text(yWeatherCodes(data.query.results.channel[0].item.forecast.code,cCode));
+				$(".date").text(yDay(data.query.results.channel[0].item.forecast.day,data.query.results.channel[0].item.forecast.date,cCode));
 				Materialize.toast("Yahoo weather "+status, 3000);
 				});
 				
